@@ -11,7 +11,8 @@ export class ProjectsService {
   getAllProjects(){
     return this.db.collection("projects").valueChanges()
   }
-  addEmployee(project: Project) {
+  
+  addProjects(project: Project) {
     let name = project.projectName + 1
     this.db.collection("projects").doc(name.toString()).set({
       projectName: project.projectName,
