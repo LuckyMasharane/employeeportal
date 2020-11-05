@@ -17,7 +17,7 @@ constructor(private _formBuilder: FormBuilder, private employeeService: Employee
 
 ngOnInit() {
  this.contactForm = this._formBuilder.group({
-    id: 1,
+    id: "",
     empName: "",
     empSurname: "",
     empPosition: "",

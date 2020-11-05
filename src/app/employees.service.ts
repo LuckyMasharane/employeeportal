@@ -56,9 +56,9 @@ export class EmployeesService {
     }
   }
   addEmployee(employee: Employee) {
-    let Id = employee.id + 1
+    let Id = Math.floor(Math.random() * 50)
     this.db.collection("employees").doc(Id.toString()).set({
-      id: this.employeesList.length,
+      id: Id,
       empName: employee.empName,
       empSurname: employee.empSurname,
       empPosition: employee.empPosition,
